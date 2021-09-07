@@ -8,7 +8,7 @@
 
 *These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Azure Cloud Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
 
-   [filebeat-playbook.yml]() 
+   [filebeat-playbook.yml](https://github.com/Mjoyner50/supreme-garbanzo/blob/main/ansible/filebeat-playbook.yml) 
    
    [filebeat-configuration.yml]() 
 
