@@ -29,8 +29,8 @@
 
 - What aspect of security do load balancers protect? 
 
-	- It helps prevent overloading servers as well as optimizes productivity and maximizes uptime. 
-	- It also adds resiliency by rerouting live traffic from one server to another causing it to eliminate single points of failure from attacks such as DDoS attack.
+	- It helps the servers balance traffic and stops the servers from overloading. 
+	- It also reroute live traffic from one server to another helping to eliminate single points of failure from attacks such as DDoS attack.
 
 - What is the advantage of a jump box?
 
