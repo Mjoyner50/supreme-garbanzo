@@ -52,11 +52,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name                 | Function | IP Address                               | Operating System     |
 |----------------------|----------|------------------------------------------|----------------------|
-| Jump-Box-Provisioner | Gateway  | 10.0.0.4(Private)//(Public) |     Linux            |
-| ELK-VM               | Server   | 10.1.0.4(Private)//(Public) |     Linux            |
-| Web-1                | Server   | 10.0.0.9(Private)                        |     Linux            |
-| Web-2                | Server   | 10.0.0.10(Private)                       |     Linux            |
-| Web-3                | Server   | 10.0.0.11(Private)                       |     Linux            |
+| Jump-Box-Provisioner | Gateway  | 10.0.0.5(Private)//20.102.53.201(Public) |     Linux            |
+| ELK-VM               | Server   | 10.2.0.4(Private)//40.112.181.143(Public)|     Linux            |
+| Web-1                | Server   | 10.0.0.8(Private)                        |     Linux            |
+| Web-2                | Server   | 10.0.0.9(Private)                        |     Linux            |
 
 ### Access Policies
 
@@ -72,17 +71,16 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 	- Jump-Box-Provisioner  
 
 - What was its IP address?
-	- 10.0.0.8 (Private) 
+	- 10.0.0.5 (Private) 
 
 - A summary of the access policies in place can be found in the table below.
 
 | Name                  | Publicly Accessible | Allowed IP Addresses |
 |-----------------------|---------------------|----------------------|
-| Jump-Box-Provisioner  |       Yes           | Localhost Public IPV4|
-| ELK-VM*               |       No            | 10.0.0.8             |
-| Web-1*                |       No            | 10.0.0.9             |
-| Web-2*                |       No            | 10.0.0.10            |
-| Web-3*                |       No            | 10.0.0.11            |
+| Jump-Box-Provisioner  |       Yes           | 20.102.53.201/10.0.0.5|
+| ELK-VM*               |       No            | 10.2.0.4             |
+| Web-1*                |       No            | 10.0.0.8             |
+| Web-2*                |       No            | 10.0.0.9             |
 
 * --All these VMs can only be accessed form the Jump-Box-Provisioner--
 
@@ -114,9 +112,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 - List the IP addresses of the machines you are monitoring
 
-	- Web-1 (10.0.0.9)
-	- Web-2 (10.0.0.10)
-	- Web-3 (10.0.0.11)
+	- Web-1 (10.0.0.8)
+	- Web-2 (10.0.0.9)
+	
 
 - We have installed the following Beats on these machines:
 
