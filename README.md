@@ -96,16 +96,16 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 *The playbook implements the following tasks:
 - In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 
-	- First, SSH into the Jump-Box-Provisioner (ssh admin@52.170.129.21)
-	- Find name of ansible container: "sudo su", "docker container ls -a" (example name: zealous_yalow)
-	- Start/Attached to the ansible docker: "sudo su", "docker start zealous_yalow", "docker attach zealous_yalow"
-	- Went to /etc/ansible directory and created the ELK playbook (install-elk.yml)
-	- Ran the install-elk.yml in that same directory (ansible-playbook install-elk.yml)
+	- First, SSH into the Jump-Box-Provisioner (ssh mjoyner@20.102.53.201)
+	- Find name of ansible container: "sudo su", "docker container ls -a" (example name:relaxed_ganguly)
+	- Start/Attached to the ansible docker: "sudo su", "docker start relaxed_ganguly", "docker attach relaxed_ganguly"
+	- Went to /etc/ansible directory and created the ELK playbook (elk1.yml)
+	- Ran the elk1.yml in that same directory (ansible-playbook elk1.yml)
 	- Lastly, SSH into the ELK-VM to verify the server is up and running.
 
 *The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[ELK-VM "Docker PS"]()
+[ELK-VM "Docker PS"](https://github.com/Mjoyner50/supreme-garbanzo/blob/main/linux/Elk%20Server.PNG)
 
 ### Target Machines & Beats
 *This ELK server is configured to monitor the following machines:
@@ -118,17 +118,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 - We have installed the following Beats on these machines:
 
-	- [Filebeat Module Status Screenshot])
+   - Metricbeat
+   - Filebeat
 
-1. Create filebeat-config.yml: nano filebeat-config.yml, paste text from provided file and update with correct ip addresses.
-2. Create filebeat-playbook.yml: nano filebeat-playbook, paste text from provided file. Verify correct "src" for absoulte path to filebeat-config.yml.
-3. Run playbook: "ansible-playbook filebeat-playbook.yml"
-
-	- [Metricbeat Module Status Screenshot]()
-
-1. Create metricbeat-config.yml: nano metricbeat-config.yml, paste text from provided file and update with correct ip addresses.
-2. Create metricbeat-playbook.yml: nano metricbeat-playbook, paste text from provided file. Verify correct "src" for absolute path to metricbeat-config.yml.
-3. Run playbook: "ansible-playbook metricbeat-playbook.yml"
 
 *These Beats allow us to collect the following information from each machine:
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
@@ -147,21 +139,21 @@ SSH into the control node and follow the steps below:
 
 ---ELK---
 
-- Copy the install-elk.yml file to /etc/ansible
-- Update the Ansible-hosts file to include a "webservers" section and an "elk" section.
-- Run the playbook (ansible-playbook install-elk.yml), ssh into ELK-VM and run "docker ps" to verify installation worked as expected.
+- Copy the elk1.yml file to /etc/ansible
+- Update the hosts file to include a "webservers" section and an "elk" section.
+- Run the playbook (ansible-playbook elk1.yml), ssh into ELK-VM and run "docker ps" to verify installation worked as expected.
 
 _Answer the following questions to fill in the blanks:_
 
 - Which file is the playbook? 
-   - install-elk.yml
+   - elk1.yml
 - Where do you copy it? 
    - /etc/ansible
 - Which file do you update to make Ansible run the playbook on a specific machine? 
    - /etc/ansible/hosts file (IP of the Virtual Machines). 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
-   - I have to specify two separate groups in the etc/ansible/hosts file. One of the groups will be webservers which has the IPs of the VMs that I will install Filebeat to. The other group is named elkservers which will have the IP of the VM I will install ELK to.
+   - I have to specify two separate groups in the etc/ansible/hosts file. One of the groups will be "webservers" which has the IPs of the VMs that I will install Filebeat to. The other group is named "elk" which will have the IP of the VM I will install ELK to.
 - Which URL do you navigate to in order to check that the ELK server is running? 
-   - http://IPV4:5601/ 
+   - http://40.112.181.143:5601/ 
 
 
