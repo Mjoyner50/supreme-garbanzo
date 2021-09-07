@@ -150,9 +150,9 @@ _Answer the following questions to fill in the blanks:_
 - Where do you copy it? 
    - /etc/ansible
 - Which file do you update to make Ansible run the playbook on a specific machine? 
-   - /etc/ansible/hosts file (IP of the Virtual Machines). 
+   - /etc/ansible/hosts file. 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
-   - I have to specify two separate groups in the etc/ansible/hosts file. One of the groups will be "webservers" which has the IPs of the VMs that I will install Filebeat to. The other group is named "elk" which will have the IP of the VM I will install ELK to.
+   - There are two separate groups in the etc/ansible/hosts file. One is for servers, web 1 & 2, which has the IPs of the VMs that will have Filebeat on it. The other group is the elk server, which will have the IP of the VM that has ELK install on it.
 - Which URL do you navigate to in order to check that the ELK server is running? 
    - http://40.112.181.143:5601/ 
 
